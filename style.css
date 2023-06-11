@@ -645,41 +645,38 @@ display: none;
 }
 
 
-
 .loader {
     background-color: white;
     position: fixed;
-    top: 0;
     left: 0;
     height: 100vh;
     width: 100%;
     z-index: 9999;
     display: grid;
   place-items: center;
-
-
+  animation: vanish 3.5s ease-in-out forwards;
+top: -100%;
 }
-
-
-
-.disappear {
-    animation: vanish 8s ease-in-out forwards;
-}
-
 
 @keyframes vanish {
     0% {
+        display: block;
         top: 0;
     }
+
     50% {
         top: 0;
-
+    }
+    60% {
+        top: 0;
+    }
+    80% {
+        top: 0;
     }
     100% {
-        top: -150%;
+        top: -100%;
     }
 }
-
 .loaders {
     font-size: 5em;
     color: black;
